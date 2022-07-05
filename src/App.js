@@ -13,7 +13,7 @@ function App() {
       <header className="App-header">
 
         <Button variant="outlined" onclick="contador()">Contador</Button>
-          <h1>Hay {number} personas en el pub ahora mismo.</h1>
+          <p>Hay {number} personas en el Pub.</p>
           {/*<div className="sacarPorPantalla">*/}
           {/*    <p>It is {new Date().toLocaleTimeString()}.</p>*/}
           {/*</div>*/}
