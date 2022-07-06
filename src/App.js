@@ -1,11 +1,11 @@
 //import logo from './logo.svg';
-import './App.css';
-import React from "react";
+import './style/App.css';
+import React, { useState } from "react";
 import Button from '@mui/material/Button';
+import {Paper} from "@mui/material";
 
 function App() {
-    let number=0;
-    //let estado = this.state;
+    let [number, setCount] = useState(0);
     // const contador = () => {
     //     //e.preventDefault();
     //     number++;
@@ -13,20 +13,19 @@ function App() {
     //         <p>Hay {number} personas en el Pub.</p>
     //     );
     // };
-    function contador() {
-        number++;
-        return(
-            <p>Hay {number} personas en el Pub.</p>
-        )
-    }
+
 
     return(
         <div className="App">
             <header className="App-header">
-                <Button variant="outlined" onClick={ function(e) {
-                    this.contador();
-                }}
-                >Contador</Button>
+                <Button variant="outlined" onClick={
+                    () => setCount(number+1)
+                }>Entrada</Button>
+                <Button variant="outlined" onClick={
+                    () => setCount(number-1)
+                }>Salida</Button>
+                <Paper>Hay {number} personas en el Pub.</Paper>
+
             </header>
         </div>
     )
